@@ -1,0 +1,64 @@
+/* src/components/InputGroup/InputGroup.css */
+.input-group {
+  /* margin-bottom: 16px; */
+  margin: 30px auto;
+}
+
+.input-group-label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.input-group-input {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 324px;
+  border-radius: 4px;
+}
+
+.input-group-input input {
+  flex: 1;
+}
+
+.input-group.default { /* Стиль за замовчуванням */ }
+
+.input-group.hover .input-group-input { /* Стиль для hover */ }
+
+.input-group.focus .input-group-input { 
+  border: 1px solid  rgba(132, 202, 255, 1);
+  box-shadow: 0px 0px 0px 4px rgba(46, 144, 250, 0.24);
+  outline: none;
+}
+
+.input-group.error .input-group-input { 
+  border: 1px solid  rgba(253, 162, 155, 1);
+  border-color: red; 
+  background: rgba(255, 255, 255, 1);
+}
+
+.input-group.error-focus .input-group-input { 
+  box-shadow: 0px 0px 0px 4px rgba(240, 68, 56, 0.24);
+  border: 1px solid rgba(253, 162, 155, 1);
+}
+
+.input-group.disabled .input-group-input {
+  border: 1px solid rgba(209, 209, 214, 1);
+  background: rgba(255, 255, 255, 1);
+
+  cursor: not-allowed;
+}
+
+.input-group-input .input-icon {
+  position: absolute;
+  right: 10px;
+  color: #aaa;
+}
+
+.icon-error .icon-before,
+.icon-error .icon-after {
+  color: #d9534f; /* Червоний колір для іконок */
+}
+  

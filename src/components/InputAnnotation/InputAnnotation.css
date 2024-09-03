@@ -1,0 +1,20 @@
+/* Загальний стиль для компонента InputAnnotation */
+.input-annotation {
+  padding: 4px 0;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: left;
+  color:rgba(81, 82, 92, 1);
+}
+
+/* Стиль для типу "info" */
+.input-annotation-info {
+  color:rgba(81, 82, 92, 1);
+}
+
+/* Стиль для типу "error" */
+.input-annotation-error {
+  color: rgba(217, 45, 32, 1);
+}
