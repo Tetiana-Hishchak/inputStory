@@ -11,5 +11,5 @@ const Template = (args) => <InputLabel {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   htmlFor:"email", 
-  label:"Email:",
+  labelText:"Email:",
 };

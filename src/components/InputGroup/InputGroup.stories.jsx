@@ -7,8 +7,8 @@ export default {
   argTypes: {
     labelSize: {
       control: { type: 'select' },
-      options: ['sm', 'md', 'lg', 'xl'],
-      defaultValue: 'sm',  
+      options: ["sm","md","lg","xl"],
+      defaultValue: 'md',  
     },
     state: {
       control: { type: 'select' },
@@ -26,7 +26,7 @@ export default {
     },
     label: { control: 'boolean', defaultValue: true }, 
 
-    
+    labelText:{control: 'text', defaultValue: 'Email:'},
     border: { control: 'boolean', defaultValue: true },  
     helperText: { control: 'boolean', defaultValue: true }, 
 
@@ -36,7 +36,7 @@ export default {
       size: {
         control: { type: 'select' },
         options: ['sm', 'md', 'lg', 'xl'],
-        defaultValue: 'sm',  
+        defaultValue: 'md',  
       },
       alignment: {
         control: { type: 'select' },
@@ -75,17 +75,13 @@ Default.args = {
   state: 'default',
   labelPosition: 'top', 
   size: 'sm',  
-  border: true, 
+  labelText: 'Email:', 
   helperText: true,  
-  labelSize: {
-    control: { type: 'select' },
-    options: ['sm', 'md', 'lg', 'xl'],
-    defaultValue: 'sm',  
-  },
+  labelSize: 'md',
   inputProps: {
     placeholder: 'Input...',
     disabled: false,
-    size: 'sm',  
+    size: 'md',  
     alignment: 'left',  
     border: true, 
     iconBefore: true, 

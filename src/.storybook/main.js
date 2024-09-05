@@ -11,6 +11,7 @@ const config = {
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
     "@storybook-custom-theme-switcher",
+    "@storybook/addon-themes",
   ],
   framework: {
     name: "@storybook/react-vite",

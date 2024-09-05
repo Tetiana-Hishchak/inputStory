@@ -1,21 +1,41 @@
-:root {
-  --colorinput: black;
-  --colorw: red;
+.dark, [data-theme="dark"] {
+  color: red;
 }
 
+
 .input-label {
-  display: block;
   font-size: 12px;
   font-weight: 500;
   line-height: 20px;
-  text-align: left;
   margin-bottom: 4px;
   display: flex;
   align-items: center;
   gap: 4px;
-  /* color:rgba(26, 26, 30, 1); */
-  color: var(--colorinput);
+  color:rgba(26, 26, 30, 1);
+}
 
+.input-label--sm {
+  font-size: 12px;
+}
+
+.input-label--md {
+  font-size: 14px;
+}
+
+.input-label--lg {
+  font-size: 16px;
+}
+
+.input-label--xl {
+  font-size: 18px;
+}
+
+.input-label--top {
+  margin-bottom: 8px;
+}
+
+.input-label--left {
+  margin-right: 10px;
 }
 
 .required-indicator {
@@ -24,29 +44,12 @@
 }
 
 .icon-info {
+  display: block;
   cursor: pointer;
 }
 
 .icon-info:hover {
-  filter: brightness(1.2); /* Зміна яскравості при наведенні */
-}
-
-@media (prefers-color-scheme: dark) {
-  .input-label {
-    color: red;
-  } 
-
-
- 
+  filter: brightness(1.2);
 }
 
 
-
-
-:root [data-theme="light"] {
-  --colorinput: #000;
-}
-
-:root [data-theme="dark"] {
-  --colorinput: red;
-}

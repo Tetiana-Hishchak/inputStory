@@ -13,34 +13,37 @@ const InputGroup = ({
   annotationType = 'info',
   required = false,
   infoIcon,
+  labelText,
   labelPosition = 'top',
-  labelSize = 'sm', 
+  labelSize = 'md', 
   ...props
 }) => {
 
   const currentAnnotationType = (state === 'error' || state === 'error-focus') ? 'error' : annotationType;
 
   return (
-    <div className={`input-group ${state}`} {...props}>
-      {label && (
-        <InputLabel
+    <div 
+      className={`input-group ${state}`} {...props}
+    >
+      <div className={`input-group-wrapper input-group-wrapper--${labelPosition}`}>
+        {label && (
+          <InputLabel
           htmlFor={inputProps?.id}
-          label={'Email'} 
+          labelText={labelText}
           required={required}
           infoIcon={infoIcon}
-          style={{
-            display: labelPosition === 'top' ? 'block' : 'inline-block',
-            marginBottom: labelPosition === 'top' ? '8px' : '0',
-            marginRight: labelPosition === 'left' ? '-10px' : '0',
-            fontSize: labelSize === 'sm' ? '12px' : labelSize === 'md' ? '14px' : labelSize === 'lg' ? '16px' : '18px', 
-          }}
+          labelSize={labelSize}
+          className={`input-label input-label--${labelSize} input-label--${labelPosition}`}
         />
-      )}
-      <div className="input-group-input">
-        <InputText 
-          {...inputProps}
-          state={state}
-        />
+        )}
+        <div className={`input-group-input input-group-input--${labelPosition}`}>
+          <InputText 
+            {...inputProps}
+            state={state}
+            labelPosition ={labelPosition}
+            
+          />
+        </div>
       </div>
       {helperText && (
         <InputAnnotation
@@ -53,7 +56,7 @@ const InputGroup = ({
 };
 
 InputGroup.propTypes = {
-  label: PropTypes.string,
+  label: PropTypes.bool,
   helperText: PropTypes.bool,
   state: PropTypes.oneOf(['default', 'hover', 'focus', 'error', 'error-focus', 'disabled']),
   annotationType: PropTypes.oneOf(['info', 'error']),
@@ -77,4 +80,6 @@ InputGroup.propTypes = {
 };
 
 export default InputGroup;
+
+
 

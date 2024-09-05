@@ -1,0 +1,18 @@
+.theme-light .sb-show-main {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.theme-light .hint-text {
+  color: #666666;
+}
+
+
+.theme-dark .sb-show-main {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.theme-dark .hint-text {
+  color: #bbbbbb;
+}
